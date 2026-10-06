@@ -1,4 +1,4 @@
-# 📊 Analisis Performa Pelanggan dan Produk (Superstore)
+# 📊 Analisis Performa Pelanggan dan Produk Dari Data Superstore
 
 ## 📌 Overview Project
 Project ini bertujuan untuk menganalisis performa keuntungan perusahaan ritel berdasarkan kategori produk, sub-kategori, segmen pelanggan, dan pemberian diskon.
@@ -56,7 +56,7 @@ Variabel utama pada dataset:
 ## 🧹 Data Preparation
 1. **Data Exploration:** tidak ditemukan inkonsistensi, missing value, maupun duplicate value.
 2. **Tipe data:** kolom `Order Date` dan `Ship Date` masih bertipe string, sehingga diubah menjadi `datetime`.
-3. **Outlier:** ditemukan outlier pada kolom Quantity (1,70%), Sales (11,68%), Discount (8,57%), dan Profit (18,82%). Outlier dianggap valid sehingga tidak dilakukan penanganan khusus (disarankan konfirmasi ke pemberi data).
+3. **Outlier:** ditemukan outlier pada kolom Quantity (1,70%), Sales (11,68%), Discount (8,57%), dan Profit (18,82%). Outlier dianggap valid sehingga tidak dilakukan penanganan khusus (disarankan konfirmasi ke pemberi data). Tidak terdapat outlier pada kolom lainnya.
 4. **Export:** data bersih diekspor ke Excel (`Sample - Superstore Clean Dataset.xlsx`) untuk divisualisasikan di Tableau.
 
 ## 📈 KPI Utama
@@ -67,44 +67,25 @@ Variabel utama pada dataset:
 
 ## 🔍 Insight dari Data
 
-### 1. Diskon di atas 20% mengubah untung menjadi rugi
-- Terdapat hubungan negatif antara diskon dan keuntungan: semakin besar diskon, semakin cenderung merugi.
-- Diskon 21%–30% sudah membuat kategori Furniture rugi (margin -10,75%).
-- Diskon di atas 30% membuat **semua kategori** rugi: Furniture -45,76%, Office Supplies -119,27%, Technology -27,41%.
-- Margin terbesar ada pada kategori Technology tanpa diskon (33,96%).
+Dari total penjualan sebesar $2.297.200,86, perusahaan berhasil membukukan keuntungan $286.397,02 atau margin 12,47%. Angka ini tampak positif, namun di baliknya terdapat beberapa pola menarik yang layak diperhatikan.
 
-### 2. Furniture memiliki margin rendah dan menurun
-- Sub-kategori yang merugi: **Tables** (-$17.725,48), **Bookcases** (-$3.472,56), dan **Supplies** (-$1.189,10, kategori Office Supplies).
-- Margin Furniture hanya berkisar 1%–4% selama 2014–2017 dan turun di tahun terakhir. Office Supplies juga mengalami penurunan margin di tahun terakhir, kemungkinan akibat diskon di atas 20%.
-- Kerugian pada Tables dan Bookcases diduga akibat diskon terlalu besar dan biaya akuisisi/logistik yang tinggi.
+Diskon menjadi titik awal cerita. Data menunjukkan hubungan negatif antara besarnya diskon dan keuntungan: semakin besar diskon, semakin besar pula kecenderungan terjadinya kerugian. Tanpa diskon, Technology mampu menghasilkan margin 33,96%, Office Supplies 29,52%, dan Furniture 22,71%. Ketika diskon mencapai rentang 21%–30%, Furniture mulai merugi dengan margin -10,75%. Pada diskon di atas 30%, seluruh kategori mengalami kerugian, yaitu Furniture -45,76%, Office Supplies -119,27%, dan Technology -27,41%. Hal ini dapat terjadi karena diskon memotong harga jual, sementara biaya modal dan operasional tetap sama.
 
-### 3. Segmen Home Office: margin terbesar, tetapi kontribusi terkecil
-| Segmen | Total Keuntungan | Margin Keuntungan | Proporsi Pesanan |
-|---|---:|---:|---:|
-| Consumer | $134.119,21 | 11,55% | 51,94% |
-| Corporate | $91.979,13 | 13,03% | 30,22% |
-| Home Office | $60.298,68 | 14,03% | 17,84% |
+Dampak diskon terasa paling besar pada Furniture. Kategori ini hanya mencatat margin sekitar 1%–4% sepanjang 2014–2017 dan kembali menurun di tahun terakhir. Penyebab utamanya adalah sub-kategori Tables yang merugi $17.725,48 dan Bookcases yang merugi $3.472,56, kemungkinan akibat diskon yang terlalu besar serta biaya logistik yang tinggi. Office Supplies juga mengalami penurunan margin di tahun terakhir, dan hal ini diduga berkaitan dengan pemberian diskon di atas 20%. Sementara itu, sub-kategori Supplies turut mencatat kerugian sebesar $1.189,10.
 
-Consumer memberi keuntungan terbesar namun dengan margin terkecil, sedangkan Home Office memiliki margin terbesar tetapi jumlah pesanan dan keuntungan paling kecil. Hal ini mengindikasikan penjualan terlalu fokus pada segmen Consumer.
+Di sisi lain, Technology tampil sebagai penopang keuntungan. Technology memberi keuntungan terbesar di seluruh segmen dan menjadi kategori dengan margin tertinggi di tahun terakhir, dengan Copiers ($55.617,82), Phones ($44.515,73), dan Accessories ($41.936,64) sebagai sub-kategori paling menguntungkan. Menariknya, Office Supplies justru mendominasi jumlah pesanan (60,30%) dan kuantitas terjual, sehingga volume penjualan terbesar tidak selalu sejalan dengan keuntungan terbesar.
 
-### 4. Insight tambahan
-- **Office Supplies** adalah kategori paling dominan berdasarkan total pesanan (60,30%) dan kuantitas terjual, namun **Technology** memberi keuntungan terbesar di semua segmen.
-- **Technology** merupakan kategori dengan margin terbesar di tahun terakhir.
-- **Sub-kategori** paling menguntungkan: Copiers ($55.617,82), Phones ($44.515,73), dan Accessories ($41.936,64).
+Cerita serupa terlihat pada segmen pelanggan. Consumer menyumbang keuntungan terbesar dan lebih dari separuh pesanan, tetapi memiliki margin paling rendah. Sebaliknya, Home Office memiliki margin paling tinggi namun kontribusi pesanan dan keuntungan paling kecil. Kondisi ini menunjukkan bahwa strategi penjualan masih cenderung terfokus pada segmen Consumer, sehingga potensi segmen Home Office belum tergarap optimal.
 
 ## 💡 Recommendation
 
-### 1. Batasi Diskon Maksimum 20%
-Hentikan pemberian diskon di atas 20%. Ganti dengan sistem bundling atau gratis ongkir dengan minimum transaksi.
+Berdasarkan temuan di atas, beberapa langkah berikut dapat dipertimbangkan untuk menjaga keuntungan perusahaan.
 
-### 2. Tingkatkan Margin Furniture, Khususnya Sub-Kategori Tables, Menjadi 0% dalam 4 Bulan
-- Hentikan diskon di atas 20%
-- Naikkan harga Tables sebesar 10% agar margin mendekati 0% (tidak rugi, tidak untung)
-- Turunkan biaya logistik melalui negosiasi dengan mitra logistik
+Pertama, disarankan untuk membatasi diskon maksimum sebesar 20%. Mengingat diskon di atas 20% konsisten menimbulkan kerugian, perusahaan dapat mempertimbangkan alternatif promosi yang lebih aman bagi margin, seperti sistem bundling atau gratis ongkos kirim dengan minimum transaksi tertentu.
 
-### 3. Tingkatkan Transaksi dan Penjualan Segmen Home Office sebesar 10% dalam 4 Bulan
-- Jalankan campaign marketing (iklan di Facebook, Instagram, dan TikTok) dengan target audiens pekerja freelance dan pekerja WFH
-- Sediakan promo bundling
+Kedua, disarankan untuk memperbaiki margin Furniture, khususnya sub-kategori Tables, hingga mendekati 0% dalam waktu 4 bulan. Langkah yang dapat dipertimbangkan antara lain membatasi diskon di bawah 20%, menaikkan harga Tables sekitar 10%, serta menegosiasikan biaya logistik dengan mitra pengiriman. Dengan begitu, Tables diharapkan tidak lagi merugi dan tidak membebani total keuntungan perusahaan.
+
+Ketiga, disarankan untuk meningkatkan transaksi dan penjualan segmen Home Office sebesar 10% dalam waktu 4 bulan. Hal ini dapat dilakukan melalui campaign marketing, misalnya iklan di Facebook, Instagram, dan TikTok yang ditargetkan kepada pekerja freelance dan pekerja WFH, serta didukung promo bundling. Mengingat segmen ini memiliki margin tertinggi, peningkatan transaksinya berpotensi memberi kontribusi keuntungan yang lebih sehat bagi perusahaan.
 
 ## 📊 Dashboard
 Dashboard interaktif dibuat di Tableau dengan filter **Segment** dan **Kategori**, terdiri dari:
