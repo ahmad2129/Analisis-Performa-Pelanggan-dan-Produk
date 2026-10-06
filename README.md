@@ -118,8 +118,7 @@ Dashboard interaktif dibuat di Tableau dengan filter **Segment** dan **Kategori*
 - Heatmap keuntungan, penjualan, dan kuantitas per kategori setiap segmen
 - Total keuntungan dan margin keuntungan berdasarkan segmen
 
-[> 📷 Tambahkan screenshot dashboard di sini:
-> `![Dashboard](images/dashboard.png)`](https://github.com/ahmad2129/Mini-Project-Visualisasi/blob/main/dashboard/Dashboard%20Visualisasi.png)
+(https://github.com/ahmad2129/Mini-Project-Visualisasi/blob/main/dashboard/Dashboard%20Visualisasi.png)
 
 ## 📊 Presentasi Project
 Untuk melihat penjelasan lengkap dari project ini, silakan lihat slide presentasi berikut:
