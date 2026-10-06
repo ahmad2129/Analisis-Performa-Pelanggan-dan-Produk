@@ -124,7 +124,7 @@ Dashboard interaktif dibuat di Tableau dengan filter **Segment** dan **Kategori*
 ## 📊 Presentasi Project
 Untuk melihat penjelasan lengkap dari project ini, silakan lihat slide presentasi berikut:
 
-🔗 [Link PPT](#) <!-- ganti dengan link presentasi Anda -->
+🔗 [https://github.com/ahmad2129/Mini-Project-Visualisasi/blob/main/report/Presentasi%20Mini%20Project%20Power%20BI%20%26%20Tableau%201%20Ahmad%20Malik%20Ibrahim.pdf](#)
 
 ## 🛠 Tools yang Digunakan
 - **Python** (Data Exploration, Data Cleaning & Data Preparation)
