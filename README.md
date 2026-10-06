@@ -67,7 +67,7 @@ Variabel utama pada dataset:
 
 ## 🔍 Insight dari Data
 
-Perusahaan membukukan keuntungan $286.397,02 dengan margin 12,47%, namun diskon di atas 20% konsisten menyebabkan kerugian karena memotong harga jual sementara biaya tetap sama. Dampaknya paling terasa pada Furniture yang bermargin rendah (sekitar 1%–4%) akibat kerugian sub-kategori Tables (-$17.725,48) dan Bookcases (-$3.472,56), sedangkan Technology menjadi penopang keuntungan terbesar di semua segmen. Pola serupa tampak pada segmen pelanggan: Consumer memberi keuntungan terbesar ($134.119,21) tetapi bermargin paling rendah (11,55%), sementara Home Office bermargin tertinggi (14,03%) namun kontribusinya paling kecil, sehingga potensinya belum tergarap optimal.
+Perusahaan membukukan keuntungan $286.397,02 dengan margin 12,47%, namun diskon di atas 20% konsisten menyebabkan kerugian karena memotong harga jual sementara biaya tetap sama. Dampaknya paling terasa pada Furniture yang bermargin rendah (sekitar 1%–4%) akibat kerugian sub-kategori Tables (-$17.725,48) dan Bookcases (-$3.472,56), sedangkan Technology menjadi penopang keuntungan terbesar di semua segmen. Pola serupa tampak pada segmen pelanggan. Consumer memberi keuntungan terbesar ($134.119,21) tetapi bermargin paling rendah (11,55%), sementara Home Office bermargin tertinggi (14,03%) namun kontribusinya paling kecil, sehingga potensinya belum tergarap optimal.
 
 ## 💡 Recommendation
 
