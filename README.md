@@ -90,7 +90,7 @@ Consumer memberi keuntungan terbesar namun dengan margin terkecil, sedangkan Hom
 ### 4. Insight tambahan
 - **Office Supplies** adalah kategori paling dominan berdasarkan total pesanan (60,30%) dan kuantitas terjual, namun **Technology** memberi keuntungan terbesar di semua segmen.
 - **Technology** merupakan kategori dengan margin terbesar di tahun terakhir.
-- Sub-kategori paling menguntungkan: Copiers ($55.617,82), Phones ($44.515,73), dan Accessories ($41.936,64).
+- **Sub-kategori** paling menguntungkan: Copiers ($55.617,82), Phones ($44.515,73), dan Accessories ($41.936,64).
 
 ## 💡 Recommendation
 
